@@ -1,0 +1,9 @@
+.\objects\gpio.o: GPIO.C
+.\objects\gpio.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\gpio.o: LPC11xx.h
+.\objects\gpio.o: G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cm0.h
+.\objects\gpio.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gpio.o: G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmInstr.h
+.\objects\gpio.o: G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmFunc.h
+.\objects\gpio.o: system_LPC11xx.h
+.\objects\gpio.o: gpio.h
