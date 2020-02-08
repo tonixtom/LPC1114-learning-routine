@@ -1,13 +1,13 @@
 Chip:
     LPC1114F301
 
-Evaluation Board£º
+Evaluation Board:
     RuiCST-LPC11XX
 
-Development Environment£º
+Development Environment:
     Keil RealView MDK 4.12
 
-Complier£º
+Complier:
     ARMCC
 
 Tasks:    
