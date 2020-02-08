@@ -1,4 +1,4 @@
-Chip£º
+Chip:
     LPC1114F301
 
 Evaluation Board£º
