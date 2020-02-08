@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\obj\main.o"
+".\obj\startup_lpc11xx.o"
+".\obj\system_lpc11xx.o"
+".\obj\core_cm0.o"
+".\obj\os_q.o"
+".\obj\os_sem.o"
+".\obj\os_task.o"
+".\obj\os_time.o"
+".\obj\os_core.o"
+".\obj\os_flag.o"
+".\obj\os_mbox.o"
+".\obj\os_mem.o"
+".\obj\os_mutex.o"
+".\obj\os_cpu_c.o"
+".\obj\gpio.o"
+--library_type=microlib --strict --scatter ".\Obj\ucosii.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Lst\ucosii.map" -o .\Obj\ucosii.axf
