@@ -1,0 +1,10 @@
+--cpu Cortex-M0
+".\startup_lpc11xx.o"
+".\system_lpc11xx.o"
+".\main.o"
+".\adc.o"
+".\uart.o"
+--strict --scatter ".\RationADC.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\RationADC.map" -o .\RationADC.axf

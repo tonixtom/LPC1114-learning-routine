@@ -1,0 +1,11 @@
+.\main.o: User\main.c
+.\main.o: .\LPC11XX\lpc11xx.h
+.\main.o: .\LPC11XX\core_cm0.h
+.\main.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdint.h
+.\main.o: .\LPC11XX\core_cmInstr.h
+.\main.o: .\LPC11XX\core_cmFunc.h
+.\main.o: .\LPC11XX\system_LPC11xx.h
+.\main.o: .\CFG\uart.h
+.\main.o: .\CFG\adc.h
+.\main.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdio.h
+.\main.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdlib.h
