@@ -1,36 +1,0 @@
-Dependencies for Project 'ad5_adc', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC11xx.s)(0x4F5835C6)(--cpu Cortex-M0 -g --apcs=interwork -I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx--pd "__UVISION_VERSION SETA 520"--list .\startup_lpc11xx.lst --xref -o .\startup_lpc11xx.o --depend .\startup_lpc11xx.d)
-F (.\LPC11XX\system_LPC11xx.c)(0x5E3FC1F7)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\CFG -I .\LPC11XX -I .\User-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\system_lpc11xx.o --omf_browse .\system_lpc11xx.crf --depend .\system_lpc11xx.d)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (LPC11XX\LPC11xx.h)(0x5205B0DF)
-I (LPC11XX\core_cm0.h)(0x5205B0DF)
-I (.\LPC11XX\core_cmInstr.h)(0x5205B0DF)
-I (.\LPC11XX\core_cmFunc.h)(0x5205B0DF)
-I (LPC11XX\system_LPC11xx.h)(0x5205B0DF)
-F (.\User\main.c)(0x5E3FE384)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\CFG -I .\LPC11XX -I .\User-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (.\LPC11XX\lpc11xx.h)(0x5205B0DF)
-I (.\LPC11XX\core_cm0.h)(0x5205B0DF)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (.\LPC11XX\core_cmInstr.h)(0x5205B0DF)
-I (.\LPC11XX\core_cmFunc.h)(0x5205B0DF)
-I (.\LPC11XX\system_LPC11xx.h)(0x5205B0DF)
-I (.\CFG\uart.h)(0x5205B0D8)
-I (.\CFG\adc.h)(0x520C9C9C)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
-F (.\CFG\adc.c)(0x5E3FC878)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\CFG -I .\LPC11XX -I .\User-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\adc.o --omf_browse .\adc.crf --depend .\adc.d)
-I (.\LPC11XX\lpc11xx.h)(0x5205B0DF)
-I (.\LPC11XX\core_cm0.h)(0x5205B0DF)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (.\LPC11XX\core_cmInstr.h)(0x5205B0DF)
-I (.\LPC11XX\core_cmFunc.h)(0x5205B0DF)
-I (.\LPC11XX\system_LPC11xx.h)(0x5205B0DF)
-I (CFG\adc.h)(0x520C9C9C)
-F (.\CFG\uart.c)(0x5209BFA2)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\CFG -I .\LPC11XX -I .\User-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
-I (.\LPC11XX\lpc11xx.h)(0x5205B0DF)
-I (.\LPC11XX\core_cm0.h)(0x5205B0DF)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (.\LPC11XX\core_cmInstr.h)(0x5205B0DF)
-I (.\LPC11XX\core_cmFunc.h)(0x5205B0DF)
-I (.\LPC11XX\system_LPC11xx.h)(0x5205B0DF)
-I (CFG\uart.h)(0x5205B0D8)

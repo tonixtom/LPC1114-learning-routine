@@ -1,27 +1,0 @@
-Dependencies for Project 'Lcd1602', Target 'Lcd_1602': (DO NOT MODIFY !)
-F (.\startup_LPC11xx.s)(0x559CE0AA)(--cpu Cortex-M0 -g --apcs=interwork -I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx--pd "__UVISION_VERSION SETA 520"--list .\listings\startup_lpc11xx.lst --xref -o .\objects\startup_lpc11xx.o --depend .\objects\startup_lpc11xx.d)
-F (.\main.c)(0x5E3D729B)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (GPIO.H)(0x5E3C1CF3)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx\LPC11xx.h)(0x559CE1A8)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cm0.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx\system_LPC11xx.h)(0x57035C12)
-F (.\SYSTEM_LPC11XX.C)(0x4B673062)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\objects\system_lpc11xx.o --omf_browse .\objects\system_lpc11xx.crf --depend .\objects\system_lpc11xx.d)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (LPC11xx.h)(0x4CC4484E)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cm0.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (system_LPC11xx.h)(0x4B672FBA)
-F (.\GPIO.C)(0x4D0DE728)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (LPC11xx.h)(0x4CC4484E)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cm0.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (G:\softs\kile_v5_S\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (system_LPC11xx.h)(0x4B672FBA)
-I (gpio.h)(0x5E3C1CF3)
-F (.\Readme.txt)(0x4D5D2D22)()
