@@ -1,0 +1,11 @@
+--cpu Cortex-M0
+".\obj\startup_lpc11xx.o"
+".\obj\system_lpc11xx.o"
+".\obj\uart.o"
+".\obj\i2c.o"
+".\obj\main.o"
+".\obj\at24c02.o"
+--strict --scatter ".\Obj\Ration_AT24C02.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Lst\Ration_AT24C02.map" -o .\Obj\Ration_AT24C02.axf

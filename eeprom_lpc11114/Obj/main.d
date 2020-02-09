@@ -1,0 +1,10 @@
+.\obj\main.o: User\main.c
+.\obj\main.o: .\LPC11XX\lpc11xx.h
+.\obj\main.o: .\LPC11XX\core_cm0.h
+.\obj\main.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\main.o: .\LPC11XX\core_cmInstr.h
+.\obj\main.o: .\LPC11XX\core_cmFunc.h
+.\obj\main.o: .\LPC11XX\system_LPC11xx.h
+.\obj\main.o: .\CFG\uart.h
+.\obj\main.o: .\CFG\i2c.h
+.\obj\main.o: .\AT24C02\at24c02.h
