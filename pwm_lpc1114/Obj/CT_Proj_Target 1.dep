@@ -1,0 +1,13 @@
+Dependencies for Project 'CT_Proj', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_LPC11xx.s)(0x4DC9B8AA)(--cpu Cortex-M0 -g --apcs=interwork -I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx--pd "__UVISION_VERSION SETA 520"--list .\lst\startup_lpc11xx.lst --xref -o .\obj\startup_lpc11xx.o --depend .\obj\startup_lpc11xx.d)
+F (.\MAIN\main.c)(0x5E40C082)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\ILI9325 -I .\MAIN -I .\NXPLPC11XX -I .\W25X16-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (.\NXPLPC11XX\nxplpc11xx.h)(0x4FCC20C9)
+I (.\NXPLPC11XX\ct.h)(0x4DCAB35E)
+F (.\NXPLPC11XX\nxplpc11xx.c)(0x4FCC553A)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\ILI9325 -I .\MAIN -I .\NXPLPC11XX -I .\W25X16-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\obj\nxplpc11xx.o --omf_browse .\obj\nxplpc11xx.crf --depend .\obj\nxplpc11xx.d)
+I (NXPLPC11XX\nxplpc11xx.h)(0x4FCC20C9)
+F (.\NXPLPC11XX\ssp.c)(0x501FB4A8)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\ILI9325 -I .\MAIN -I .\NXPLPC11XX -I .\W25X16-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\obj\ssp.o --omf_browse .\obj\ssp.crf --depend .\obj\ssp.d)
+I (NXPLPC11XX\nxplpc11xx.h)(0x4FCC20C9)
+I (NXPLPC11XX\ssp.h)(0x4DB2F220)
+F (.\NXPLPC11XX\ct.c)(0x502737BA)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I .\ILI9325 -I .\MAIN -I .\NXPLPC11XX -I .\W25X16-I G:\softs\kile_v5_S\ARM\RV31\INC-I G:\softs\kile_v5_S\ARM\CMSIS\Include-I G:\softs\kile_v5_S\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="520"-o .\obj\ct.o --omf_browse .\obj\ct.crf --depend .\obj\ct.d)
+I (NXPLPC11XX\nxplpc11xx.h)(0x4FCC20C9)
+I (NXPLPC11XX\ct.h)(0x4DCAB35E)
