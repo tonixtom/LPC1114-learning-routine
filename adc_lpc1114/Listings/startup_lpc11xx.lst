@@ -360,10 +360,10 @@ ARM Macro Assembler    Page 6
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
-ork --depend=.\objects\startup_lpc11xx.d -o.\objects\startup_lpc11xx.o -IG:\sof
-ts\kile_v5_S\ARM\RV31\INC -IG:\softs\kile_v5_S\ARM\CMSIS\Include -IG:\softs\kil
-e_v5_S\ARM\Inc\NXP\LPC11xx --predefine="__UVISION_VERSION SETA 520" --list=.\li
-stings\startup_lpc11xx.lst startup_LPC11xx.s
+ork --depend=.\objects\startup_lpc11xx.d -o.\objects\startup_lpc11xx.o -Id:\Kei
+l_v5\ARM\RV31\INC -Id:\Keil_v5\ARM\CMSIS\Include -Id:\Keil_v5\ARM\Inc\NXP\LPC11
+xx --predefine="__UVISION_VERSION SETA 516" --list=.\listings\startup_lpc11xx.l
+st startup_LPC11xx.s
 
 
 

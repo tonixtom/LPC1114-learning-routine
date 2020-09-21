@@ -24,7 +24,6 @@ void delay(void)
 int main()
 {
 	uint16_t adc_value;
-	uint8_t i;
 	char str[8]={'0'};
 
 	UART_init(9600);
@@ -41,9 +40,4 @@ int main()
 	//	UART_send_byte(adc_value>>8);
 	//	UART_send_byte(adc_value);
 	}
-}
-
-
-
-
-                       
+}   
