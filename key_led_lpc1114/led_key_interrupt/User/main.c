@@ -11,17 +11,19 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-
+#define LED1_ON LPC_GPIO0->DATA &= ~(1<<3)
+#define LED1_OFF LPC_GPIO0->DATA |= (1<<3)
+#define KEY1_DOWN (LPC_GPIO1->DATA&(1<<0))!=(1<<0)
 
 
 //GPIO1中断服务函数
-void PIOINT1_IRQHandler(void)
+void PIOINT1_IRQHandler_keytest(void)
 {	
-	if((LPC_GPIO1->MIS&0x001)==0x001)	   // 检测是不是P1.0引脚产生的中断
+	if((LPC_GPIO1->MIS&0x001) == 0x001)	   // 检测是不是P1.0引脚产生的中断
 	{
-		LPC_GPIO0->DATA &= ~(1<<3);				 // 开LED1
-		while((LPC_GPIO1->DATA&(1<<0))!=(1<<0));	 // 等待按键释放
-		LPC_GPIO0->DATA |= (1<<3);				 // 关LED1	
+		LED1_ON;				 // 开LED1
+		while(KEY1_DOWN);	 // 等待按键释放
+		LED1_OFF;			 // 关LED1	
 	}
 	else if((LPC_GPIO1->MIS&0x002)==0x002) // 检测是不是P1.1引脚产生的中断
 	{
@@ -32,11 +34,8 @@ void PIOINT1_IRQHandler(void)
 	LPC_GPIO1->IC = 0x3FF;  // 清除GPIO1上的中断
 }
 
-
-int main(void)
-{	
-	
-	
+void led_init()
+{
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<16);     // 使能IOCON时钟
 	LPC_IOCON->R_PIO1_0 = 0XD1; //把PIN33设置为P1.0脚
 	LPC_IOCON->R_PIO1_1 = 0XD1; //把PIN34设置为P1.1脚
@@ -51,6 +50,12 @@ int main(void)
 	//开LED1  关LED2
  	LPC_GPIO0->DATA |= (1<<3);
 	LPC_GPIO1->DATA |= (1<<10);
+}
+
+int main(void)
+{	
+	
+	led_init();
 		
 	//LPC_GPIO1->DATA |= (1<<0);   //P1.0置0
 	
