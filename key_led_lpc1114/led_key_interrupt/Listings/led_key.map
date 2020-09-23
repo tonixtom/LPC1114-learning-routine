@@ -9,6 +9,7 @@ Section Cross References
     startup_lpc11xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_lpc11xx.o(RESET) refers to startup_lpc11xx.o(STACK) for __initial_sp
     startup_lpc11xx.o(RESET) refers to startup_lpc11xx.o(.text) for Reset_Handler
+    startup_lpc11xx.o(RESET) refers to main.o(.text) for PIOINT1_IRQHandler_keytest
     startup_lpc11xx.o(.ARM.__at_0x02FC) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_lpc11xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_lpc11xx.o(.text) refers to system_lpc11xx.o(.text) for SystemInit

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\led_key.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\led_key.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Tue Sep 22 21:42:47 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Wed Sep 23 13:08:36 2020
 <BR><P>
 <H3>Maximum Stack Usage =          8 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -37,7 +37,7 @@ Function Pointers
  <LI><a href="#[e]">I2C_IRQHandler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
  <LI><a href="#[6]">NMI_Handler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
  <LI><a href="#[1e]">PIOINT0_IRQHandler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
- <LI><a href="#[1d]">PIOINT1_IRQHandler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
+ <LI><a href="#[1d]">PIOINT1_IRQHandler_keytest</a> from main.o(.text) referenced from startup_lpc11xx.o(RESET)
  <LI><a href="#[1c]">PIOINT2_IRQHandler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
  <LI><a href="#[1b]">PIOINT3_IRQHandler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
  <LI><a href="#[9]">PendSV_Handler</a> from startup_lpc11xx.o(.text) referenced from startup_lpc11xx.o(RESET)
@@ -255,9 +255,8 @@ Global Symbols
 <P><STRONG><a name="[1e]"></a>PIOINT0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc11xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc11xx.o(RESET)
 </UL>
-<P><STRONG><a name="[1d]"></a>PIOINT1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc11xx.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc11xx.o(RESET)
-</UL>
+<P><STRONG><a name="[5c]"></a>PIOINT1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc11xx.o(.text), UNUSED)
+
 <P><STRONG><a name="[1c]"></a>PIOINT2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc11xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc11xx.o(RESET)
 </UL>
@@ -301,8 +300,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[5c]"></a>PIOINT1_IRQHandler_keytest</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
-
+<P><STRONG><a name="[1d]"></a>PIOINT1_IRQHandler_keytest</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, main.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc11xx.o(RESET)
+</UL>
 <P><STRONG><a name="[31]"></a>led_init</STRONG> (Thumb, 114 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>

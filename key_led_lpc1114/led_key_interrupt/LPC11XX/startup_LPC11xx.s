@@ -55,6 +55,7 @@ __heap_limit
 
                 AREA    RESET, DATA, READONLY
                 EXPORT  __Vectors
+				IMPORT PIOINT1_IRQHandler_keytest         
 
 __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     Reset_Handler             ; Reset Handler
@@ -104,7 +105,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     FMC_IRQHandler            ; 16+27: IP2111 Flash Memory Controller
                 DCD     PIOINT3_IRQHandler        ; 16+28: PIO INT3
                 DCD     PIOINT2_IRQHandler        ; 16+29: PIO INT2
-                DCD     PIOINT1_IRQHandler        ; 16+30: PIO INT1
+                DCD     PIOINT1_IRQHandler_keytest        ; 16+30: PIO INT1
                 DCD     PIOINT0_IRQHandler        ; 16+31: PIO INT0
 
 
