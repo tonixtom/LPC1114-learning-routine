@@ -23,10 +23,14 @@ int main()
 	while(1)
 	{
 		rece_data = UART_recive();// 等待串口发来的数据
+	//	rece_data = 'a';
 		AT24C02_WriteOneByte(0x00, rece_data);// 把串口发来的数据写入AT24C02地址0x00处
 		rece_data = 0;// rece_data清零
 		rece_data = AT24C02_ReadOneByte(0x00);// 读出AT24C02地址0x00处数据，赋予rece_data
+		UART_send("this is form at2402!!!!----->", 29);//串口发送字符串数组
+		
 		UART_send_byte(rece_data);// 把读出的数据返回电脑串口
+		UART_send_byte('\n');// 把读出的数据返回电脑串口
 	}
 }
 
