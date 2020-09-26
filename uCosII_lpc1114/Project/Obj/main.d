@@ -1,9 +1,0 @@
-.\obj\main.o: ..\Main\main.c
-.\obj\main.o: ..\LPC11xx\LPC11xx.h
-.\obj\main.o: ..\CM0\core_cm0.h
-.\obj\main.o: G:\softs\kile_v5_S\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\main.o: ..\LPC11xx\system_LPC11xx.h
-.\obj\main.o: ..\uCOSII\cpu\os_cpu.h
-.\obj\main.o: ..\uCOSII\os_cfg.h
-.\obj\main.o: ..\uCOSII\ucos_ii.h
-.\obj\main.o: ..\Main\gpio.h

@@ -237,7 +237,7 @@ int main(void)
 	GPIOSetDir(PORT2,6,1);
 	GPIOSetDir(PORT2,7,1);
 
-	GPIOSetValue(PORT1,9																							,1);	//设置P1.1输出0，点亮LED1
+	GPIOSetValue(PORT1,9,1);	//设置P1.1输出0，点亮LED1
 	GPIOSetValue(PORT1,10,1);	//设置P1.1输出0，点亮LED1
 	GPIOSetValue(PORT1,11,1);	//设置P1.1输出0，点亮LED1
 	GPIOSetValue(PORT2,3,1);	//设置P1.1输出0，点亮LED1
