@@ -1,9 +1,0 @@
-.\obj\at24c16.o: AT24C16\at24c16.c
-.\obj\at24c16.o: .\LPC11XX\lpc11xx.h
-.\obj\at24c16.o: .\LPC11XX\core_cm0.h
-.\obj\at24c16.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\at24c16.o: .\LPC11XX\core_cmInstr.h
-.\obj\at24c16.o: .\LPC11XX\core_cmFunc.h
-.\obj\at24c16.o: .\LPC11XX\system_LPC11xx.h
-.\obj\at24c16.o: AT24C16\at24c16.h
-.\obj\at24c16.o: .\Code\i2c.h

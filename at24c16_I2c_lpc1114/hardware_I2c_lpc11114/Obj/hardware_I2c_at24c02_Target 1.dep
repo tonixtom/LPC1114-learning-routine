@@ -1,45 +1,0 @@
-Dependencies for Project 'hardware_I2c_at24c02', Target 'Target 1': (DO NOT MODIFY !)
-F (.\LPC11XX\system_LPC11xx.c)(0x5F6DB824)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I.\Code -I.\LPC11XX -I.\User -I.\AT24C16-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="516"-o .\obj\system_lpc11xx.o --omf_browse .\obj\system_lpc11xx.crf --depend .\obj\system_lpc11xx.d)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (LPC11XX\LPC11xx.h)(0x5F5DFF1D)
-I (LPC11XX\core_cm0.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmInstr.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmFunc.h)(0x5F5DFF1D)
-I (LPC11XX\system_LPC11xx.h)(0x5F5DFF1D)
-F (.\LPC11XX\startup_LPC11xx.s)(0x5F5DFF1D)(--cpu Cortex-M0 -g --apcs=interwork -I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx--pd "__UVISION_VERSION SETA 516"--list .\lst\startup_lpc11xx.lst --xref -o .\obj\startup_lpc11xx.o --depend .\obj\startup_lpc11xx.d)
-F (.\LPC11XX\LPC11xx.h)(0x5F5DFF1D)()
-F (.\User\main.c)(0x5F6DFCB4)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I.\Code -I.\LPC11XX -I.\User -I.\AT24C16-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="516"-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
-I (.\LPC11XX\lpc11xx.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cm0.h)(0x5F5DFF1D)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (.\LPC11XX\core_cmInstr.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmFunc.h)(0x5F5DFF1D)
-I (.\LPC11XX\system_LPC11xx.h)(0x5F5DFF1D)
-I (.\Code\uart.h)(0x5F5DFF1D)
-I (.\Code\i2c.h)(0x5F6DE0ED)
-I (.\AT24C16\at24c16.h)(0x5F6DDB63)
-F (.\AT24C16\at24c16.c)(0x5F6DDDC0)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I.\Code -I.\LPC11XX -I.\User -I.\AT24C16-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="516"-o .\obj\at24c16.o --omf_browse .\obj\at24c16.crf --depend .\obj\at24c16.d)
-I (.\LPC11XX\lpc11xx.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cm0.h)(0x5F5DFF1D)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (.\LPC11XX\core_cmInstr.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmFunc.h)(0x5F5DFF1D)
-I (.\LPC11XX\system_LPC11xx.h)(0x5F5DFF1D)
-I (AT24C16\at24c16.h)(0x5F6DDB63)
-I (.\Code\i2c.h)(0x5F6DE0ED)
-F (.\Code\i2c.c)(0x5F6DFD89)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I.\Code -I.\LPC11XX -I.\User -I.\AT24C16-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="516"-o .\obj\i2c.o --omf_browse .\obj\i2c.crf --depend .\obj\i2c.d)
-I (Code\i2c.h)(0x5F6DE0ED)
-I (.\LPC11XX\lpc11xx.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cm0.h)(0x5F5DFF1D)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (.\LPC11XX\core_cmInstr.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmFunc.h)(0x5F5DFF1D)
-I (.\LPC11XX\system_LPC11xx.h)(0x5F5DFF1D)
-F (.\Code\uart.c)(0x5F5DFF1D)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork -I.\Code -I.\LPC11XX -I.\User -I.\AT24C16-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\CMSIS\Include-I d:\Keil_v5\ARM\Inc\NXP\LPC11xx-D__UVISION_VERSION="516"-o .\obj\uart.o --omf_browse .\obj\uart.crf --depend .\obj\uart.d)
-I (.\LPC11XX\lpc11xx.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cm0.h)(0x5F5DFF1D)
-I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-I (.\LPC11XX\core_cmInstr.h)(0x5F5DFF1D)
-I (.\LPC11XX\core_cmFunc.h)(0x5F5DFF1D)
-I (.\LPC11XX\system_LPC11xx.h)(0x5F5DFF1D)
-I (Code\uart.h)(0x5F5DFF1D)
