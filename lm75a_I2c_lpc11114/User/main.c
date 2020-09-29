@@ -83,7 +83,7 @@ int main()
 	UART_Init(9600); // 初始化串口	
 	I2C_Init(1); // 初始化I2C 快速模式
 	
-	if(LM75A_Check()==0)	 // 如果检测到了AT24C16
+	if(LM75A_Check()==0)	 // 如果检测到了LM75A
 	{
 		UART_send("我检测到了LM75A  !!", 20);//串口发送字符串数组
 		UART_send_byte('\n');

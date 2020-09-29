@@ -1,3 +1,4 @@
+//利用中断的sysTick来实现一个流水灯
 #include <LPC11xx.h>
 
 

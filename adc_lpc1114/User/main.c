@@ -32,11 +32,14 @@ int main()
 	while(1)
 	{
 		delay();
+		UART_send("next: ", 6);
+		
 		adc_value = ADC_Read(5);
-	//itoa(adc_value, str, 10);
-   sprintf(str, "%d", adc_value);
-		UART_send(str, 8);//?????????
-		UART_send("next: ", 5);//?????????
+		//itoa(adc_value, str, 10);
+		sprintf(str, "%8d", adc_value);
+		UART_send(str, 8);
+		UART_send_byte('\n');
+		
 	//	UART_send_byte(adc_value>>8);
 	//	UART_send_byte(adc_value);
 	}

@@ -48,7 +48,7 @@ void UART_send_byte(uint8_t byte)
 /************************************************/
 /* 函数功能：串口发送数组数据                   */
 /************************************************/
-void UART_send(uint8_t *Buffer, uint32_t Length)
+void UART_send(char *Buffer, uint32_t Length)
 {
 	while(Length != 0)
 	{
