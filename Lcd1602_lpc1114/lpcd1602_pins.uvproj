@@ -372,7 +372,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\CFG;.\LPC11XX;.\User</IncludePath>
+              <IncludePath>.\code;.\LPC11XX;.\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -443,12 +443,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>CFG</GroupName>
+          <GroupName>code</GroupName>
           <Files>
+            <File>
+              <FileName>lcd_1602.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\code\lcd_1602.c</FilePath>
+            </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\CFG\uart.c</FilePath>
+              <FilePath>.\code\uart.c</FilePath>
             </File>
           </Files>
         </Group>
