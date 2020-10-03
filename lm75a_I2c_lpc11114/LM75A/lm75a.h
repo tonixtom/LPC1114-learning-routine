@@ -1,7 +1,7 @@
 #ifndef __LM75A_H
 #define __LM75A_H
  
-#define LM75_ADDRESS			0x92
+#define LM75_ADDRESS			0x91
 
 
 /*------------注意：LM75A的地址为（0x0000~0x07FF）（不可越界）------- */

@@ -7,20 +7,20 @@
 
   <Targets>
     <Target>
-      <TargetName>Lcd_1602</TargetName>
+      <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pArmCC>5060750::V5.06 update 6 (build 750)::ARMCC</pArmCC>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>LPC1114/301</Device>
-          <Vendor>NXP</Vendor>
+          <Device>LPC1114/302</Device>
+          <Vendor>NXP (founded by Philips)</Vendor>
           <Cpu>IRAM(0x10000000-0x10001FFF) IROM(0-0x7FFF) CLOCK(12000000) CPUTYPE("Cortex-M0")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\NXP\LPC11xx\startup_LPC11xx.s" ("NXP LPC11xx Startup Code")</StartupFile>
           <FlashDriverDll>UL2CM3(-O4303 -S0 -C0 -FO7 -FD10000000 -FC800 -FN1 -FF0LPC1xxx_32 -FS00 -FL08000)</FlashDriverDll>
-          <DeviceId>5063</DeviceId>
+          <DeviceId>5376</DeviceId>
           <RegisterFile>LPC11xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -31,7 +31,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>SFD\NXP\LPC11xx\LPC111x.SFR</SFDFile>
+          <SFDFile></SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -47,7 +47,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>test_lcd</OutputName>
+          <OutputName>lcd1603_pins</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -125,7 +125,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>0</UseSimulator>
+            <UseSimulator>1</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -137,7 +137,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
-            <UseTarget>1</UseTarget>
+            <UseTarget>0</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -172,12 +172,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>1</Capability>
-            <DriverSelection>4096</DriverSelection>
+            <Capability>0</Capability>
+            <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -353,13 +353,13 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>1</OneElfS>
+            <OneElfS>0</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
@@ -372,7 +372,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\CFG;.\LPC11XX;.\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,7 +413,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>StartFile</GroupName>
+          <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
               <FileName>startup_LPC11xx.s</FileName>
@@ -423,37 +423,32 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Source</GroupName>
+          <GroupName>LPC11XX</GroupName>
+          <Files>
+            <File>
+              <FileName>system_LPC11xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LPC11XX\system_LPC11xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\User\main.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Common</GroupName>
+          <GroupName>CFG</GroupName>
           <Files>
             <File>
-              <FileName>SYSTEM_LPC11XX.C</FileName>
+              <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\SYSTEM_LPC11XX.C</FilePath>
-            </File>
-            <File>
-              <FileName>GPIO.C</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\GPIO.C</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Readme</GroupName>
-          <Files>
-            <File>
-              <FileName>Readme.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Readme.txt</FilePath>
+              <FilePath>.\CFG\uart.c</FilePath>
             </File>
           </Files>
         </Group>
