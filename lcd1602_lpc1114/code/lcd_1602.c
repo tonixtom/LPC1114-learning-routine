@@ -1,15 +1,7 @@
 #include "lcd_1602.h"
 
 
-//*****************************引脚电平的宏定义*********************************
-#define LCM_RS_1 LPC_GPIO2->MASKED_ACCESS[1024] = 0xFFF//RS接第10脚输出高电平
-#define LCM_RS_0 LPC_GPIO2->MASKED_ACCESS[1024] = 0x000 //RS接第10脚输出低电平
-#define LCM_RW_1 LPC_GPIO2->MASKED_ACCESS[512] = 0xFFF //RW接第9脚输出高电平
-#define LCM_RW_0 LPC_GPIO2->MASKED_ACCESS[512] = 0x000 //RW接第9脚输出低电平
-#define LCM_EN_1 LPC_GPIO2->MASKED_ACCESS[256] = 0xFFF //EN接第8脚输出高电平
-#define LCM_EN_0 LPC_GPIO2->MASKED_ACCESS[256] = 0x000   //EN接第8脚输出低电平
-#define DataPort LPC_GPIO2->DATA          //PIO2为数据端口
-#define Busy 0x80         //忙信号
+
 //*******************************n*1mS延时子函数*******************************
 void TIM16B0_delay_ms(uint16_t ms)
 {
@@ -21,6 +13,8 @@ void TIM16B0_delay_ms(uint16_t ms)
   LPC_TMR16B0->TCR = 0x01;  	//启动定时器
   while (LPC_TMR16B0->TCR & 0x01);  //等待定时器计时时间到
 }
+
+
 //*******************************n*1uS延时子函数******************************
 void TIM16B0_delay_us(uint16_t us)
 {
@@ -32,12 +26,16 @@ void TIM16B0_delay_us(uint16_t us)
   LPC_TMR16B0->TCR = 0x01;  	//启动定时器
   while (LPC_TMR16B0->TCR & 0x01);  	//等待定时器计时时间到
 }
+
+
 //************************写数据到LCD数据端口子函数**************************
 void WriteDataPort(uint8_t data)
 {
   LPC_GPIO2->DATA &= 0xF00;    	//PIO2的低八位清零，高四位保持不变
   LPC_GPIO2->DATA |= data;     	//对PIO2的低八位写入数据
 }
+
+
 //************************读LCD数据端口数据子函数****************************
 uint8_t ReadDataPort(void)
 {
@@ -45,6 +43,9 @@ uint8_t ReadDataPort(void)
   temp = LPC_GPIO2->DATA;    //读取PIO2的低八位数据
   return temp;
 }
+
+
+
 //***************************检测LCD忙信号子函数*****************************
 void WaitForEnable(void)
 {

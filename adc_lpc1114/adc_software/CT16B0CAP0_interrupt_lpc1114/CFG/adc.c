@@ -14,10 +14,10 @@ void ADC_Init(uint8_t Channel)
 	switch(Channel)
 	{
 		case 0: // 通道0配置 set channel 0
-			LPC_IOCON->R_PIO0_11 &= ~0x07;              // 低3位清零
+			LPC_IOCON->R_PIO0_11 &= ~0x07;              // 
 			LPC_IOCON->R_PIO0_11 |= 0x02;               // 把P0.11引脚设置为AD0功能
-			LPC_IOCON->R_PIO0_11 &= ~(3<<3) ;           // MODE标志位清零，去掉上拉和下拉电阻
-			LPC_IOCON->R_PIO0_11 &= ~(1<<7) ;           // ADMODE标志位清0，模拟输入模式
+			LPC_IOCON->R_PIO0_11 &= ~(3<<3) ;           // 去掉上拉和下拉电阻
+			LPC_IOCON->R_PIO0_11 &= ~(1<<7) ;           // 模拟输入模式
 			break;
 		case 1:  // 通道1配置 set channel 1
 			LPC_IOCON->R_PIO1_0 &= ~0x07;              // 
@@ -63,9 +63,15 @@ void ADC_Init(uint8_t Channel)
 			break;
 		default:break;
 	}
+	LPC_IOCON->PIO0_2 &= ~0x07;              // 
+	LPC_IOCON->PIO0_2 |= 0x02;               // 把P0.2引脚设置为CT16B0CAP0
 	LPC_SYSCON->SYSAHBCLKCTRL &= ~(1<<16);    // 关闭IOCON时钟
 	LPC_ADC->CR = (1<<Channel)|                /* bit7:bit0   选择通道Channel*/
-							(28<<8);                     /* bit15:bit8  把采样时钟频率设置为2MHz 58/(24+1)*/
+										(24<<8)|                     /* bit15:bit8  把采样时钟频率设置为2MHz 50/(24+1)*/
+	                  (2<<24);                    /* CT16B0CAP0触发转换 */
+		                (1<<27);                    /* 下降沿触发 */
+	LPC_ADC->INTEN = (1<<Channel);   // 允许Channel的中断
+	NVIC_EnableIRQ(ADC_IRQn); // 开中断
 }
 
 /********************************************/
@@ -76,9 +82,8 @@ uint32_t ADC_Read(uint8_t Channel)
 {
 	uint32_t adc_value=0;
 
-	LPC_ADC->CR |= (1<<24); // 启动转换
 	while((LPC_ADC->DR[Channel]&0x80000000)==0);
-	adc_value = (LPC_ADC->DR[Channel]>>6)&0x3FF;		
+	adc_value = ((LPC_ADC->DR[Channel]>>6)&0x3FF);		
 	adc_value = (adc_value*Vref)/1024; // 转换为真正的电压值
 
 	return adc_value;	  // 返回结果

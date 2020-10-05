@@ -13,6 +13,7 @@ int main(void)
   LPC_GPIO2->DIR = 0xFFF;   		//设置端口2为输出方向
   LPC_GPIO2->DATA = 0xFFF;  	//端口输出高电平
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<7);	//使能CT16B0时钟
+	
   InitLcd();                                 		//LCD初始化
   ePutstr(0,0,str0);                   		//第一行字符显示
   TIM16B0_delay_ms(5);        		//延时5ms等待显示稳定
