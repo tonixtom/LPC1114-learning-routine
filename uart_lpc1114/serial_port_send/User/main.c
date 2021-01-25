@@ -28,7 +28,7 @@ int main()
 	while(1)
 	{
 		delay();
-		UART_send("i love tom", 10);//串口发送字符串数组
+		UART_send((uint8_t *)"i love tom", 10);//串口发送字符串数组
 		UART_send_byte('\n'); //串口发送换行符字节
 	}
 }
