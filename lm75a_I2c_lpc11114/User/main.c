@@ -66,8 +66,38 @@ float I2C_LM75A_read(void)
 	data=((uint16_t)TempH << 8) | TempL ;
 	data=(data>>5);
 	temp = 0.125*data;
+
 	return temp;
 
+}
+
+float readTemperature(void){
+	unsigned char temp[2]={0};
+	float temp_value=0.0;
+	unsigned int temp_high=0;
+	unsigned int temp_low=0;
+	unsigned int low=0;
+	unsigned int tempforh=0;
+	unsigned int judge_posneg=0;
+LM75A_Read(0x00,temp,2);
+	
+delay_ms(1000);
+	temp_high=temp[0];
+	temp_low=temp[1];
+	low=temp_low>>5;
+	tempforh=temp_high*8+low;
+ 
+	judge_posneg=(temp_high & 0x80)>>7;
+	if(judge_posneg==0){
+		temp_value=tempforh*0.125;
+		return temp_value;
+		}else {
+			tempforh=(tempforh^0x7FF)+1;
+			temp_value=tempforh*(-0.125);   
+			return temp_value;
+			}
+		
+				
 }
 
 
@@ -83,6 +113,9 @@ int main()
 	UART_Init(9600); // ³õÊ¼»¯´®¿Ú	
 	I2C_Init(1); // ³õÊ¼»¯I2C ¿ìËÙÄ£Ê½
 	
+	/*
+	UART_send("ÎÒ¼ì²âµ½Á7777ËLM75A  !!", 20);//´®¿Ú·¢ËÍ×Ö·û´®Êý×é
+	
 	if(LM75A_Check()==0)	 // Èç¹û¼ì²âµ½ÁËLM75A
 	{
 		UART_send("ÎÒ¼ì²âµ½ÁËLM75A  !!", 20);//´®¿Ú·¢ËÍ×Ö·û´®Êý×é
@@ -93,12 +126,14 @@ int main()
 		UART_send("ÎÒÃ»ÓÐ¼ì²âµ½LM75a  !! ", 23);//´®¿Ú·¢ËÍ×Ö·û´®Êý×é
 	}
 	
-
+*/
 	while(1)
 	{
 		UART_send("begin: ", 8);//´®¿Ú·¢ËÍ×Ö·û´®Êý×é
 		
-		temp = I2C_LM75A_read();
+	//	temp = I2C_LM75A_read();
+		temp = 5.34535;
+	//temp = readTemperature();
 		sprintf(str,"%8.3f",temp);    //Ð¡Êýµãºó3Î»
 		
 		UART_send(str, 8);//´®¿Ú·¢ËÍ×Ö·û´®Êý×é	

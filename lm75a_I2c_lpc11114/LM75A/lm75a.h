@@ -1,8 +1,11 @@
 #ifndef __LM75A_H
 #define __LM75A_H
  
-#define LM75_ADDRESS			0x91
+#define LM75_ADDRESS			0x97
 
+
+
+typedef unsigned          char uint8_t;
 
 /*------------注意：LM75A的地址为（0x0000~0x07FF）（不可越界）------- */
 extern uint8_t LM75A_ReadOneByte(uint8_t ReadAddr);	//指定地址读取一个字节

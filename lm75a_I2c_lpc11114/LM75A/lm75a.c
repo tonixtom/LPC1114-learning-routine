@@ -57,7 +57,7 @@ void LM75A_Read(uint8_t ReadAddr,uint8_t *Buffer,uint8_t Num)
 /* 入口参数：WriteAddr:将要写数据的目标地址  */
 /*           *Buffer:把这个数组中的数据写入  */
 /*           Num：要写的数据字节个数         */
-/* 注意：LM75A的地址为（0x0000~0x07FF）    */
+/* 注意：LM75A的地址为（0x0000~0x07FF）    */           
 /*********************************************/
 void LM75A_Write(uint8_t WriteAddr,uint8_t *Buffer,uint8_t Num)
 {
