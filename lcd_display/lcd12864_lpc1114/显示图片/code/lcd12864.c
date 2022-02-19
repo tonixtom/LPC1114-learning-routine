@@ -109,14 +109,14 @@ void Lcd12864_Init()
 	_nop_()
 
 	//--表格第8个命令，0xA0段（左右）方向选择正常方向（0xA1为反方向）--//
-	LcdSt7565_WriteCmd(0xA1);  //ADC select segment direction 
+	LcdSt7565_WriteCmd(0xA0);  //ADC select segment direction 
 	
 	//--表格第15个命令，0xC8普通(上下)方向选择选择反向，0xC0为正常方向--// 
 	LcdSt7565_WriteCmd(0xC8);  //Common direction 
 	                  
 	//--表格第9个命令，0xA6为设置字体为黑色，背景为白色---//
 	//--0xA7为设置字体为白色，背景为黑色---//
-	LcdSt7565_WriteCmd(0xA7);  //reverse display
+	LcdSt7565_WriteCmd(0xA6);  //reverse display
 
 	//--表格第10个命令，0xA4像素正常显示，0xA5像素全开--//
 	LcdSt7565_WriteCmd(0xA4);  //normal display
@@ -175,7 +175,7 @@ void Lcd12864_ClearScreen(void)
 		//--在写入数据之后X坐标的坐标是会自动加1的，我们初始化使用0xA0所以--//
 		//--我们的X坐标从0x10,0x00开始---//
 		LcdSt7565_WriteCmd(0x10); 
-		LcdSt7565_WriteCmd(0x04);							   
+		LcdSt7565_WriteCmd(0x00);							   
 		
 		//--X轴有128位，就一共刷128次，X坐标会自动加1，所以我们不用再设置坐标--//
 		for(j=0; j<128; j++)

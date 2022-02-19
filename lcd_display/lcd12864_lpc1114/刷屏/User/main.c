@@ -32,21 +32,6 @@ int main(void)
 	UART_send("begin   ",8);
 	UART_send_byte('\n');
 		
-/*
-	while (1)
-	{
-		Lcd12864_Write16CnCHAR(0, 0, (uint8_t *)"司公限有技科中普");
-		TIM16B0_delay_ms(100);
-		Lcd12864_Write16CnCHAR(0, 2, (uint8_t *)"司公限有技科中普");
-		TIM16B0_delay_ms(100);
-		Lcd12864_Write16CnCHAR(0, 4, (uint8_t *)"司公限有技科中普");
-		TIM16B0_delay_ms(100);
-		Lcd12864_Write16CnCHAR(0, 6, (uint8_t *)"司公限有技科中普");
-		TIM16B0_delay_ms(100);
-		UART_send("tomish   ",8);
-		UART_send_byte('\n');
-	}
-*/
 
 
 	while(1)
@@ -57,10 +42,10 @@ int main(void)
 			LcdSt7565_WriteCmd(0xB0+i); //设置Y坐标，具体可以看清屏函数里面的说明
 
 			LcdSt7565_WriteCmd(0x10);   //设置X坐标，具体可以看清屏函数里面的说明
-			LcdSt7565_WriteCmd(0x04);
+			LcdSt7565_WriteCmd(0x00);
 			for (j=0; j<128; j++)
 			{
-				LcdSt7565_WriteData(0xFF);  //如果设置背景为白色时，清屏选择0XFF
+				LcdSt7565_WriteData(0x1F);  //如果设置背景为白色时，清屏选择0XFF
 				TIM16B0_delay_ms(10);	           //延时一下
 			}
 		}
@@ -71,7 +56,7 @@ int main(void)
 			LcdSt7565_WriteCmd(0xB0+i); //设置Y坐标，具体可以看清屏函数里面的说明
 
 			LcdSt7565_WriteCmd(0x10);   //设置X坐标，具体可以看清屏函数里面的说明
-			LcdSt7565_WriteCmd(0x04);
+			LcdSt7565_WriteCmd(0x00);
 			for (j=0; j<128; j++)
 			{
 				LcdSt7565_WriteData(0x00);  //如果设置背景为白色时，清屏选择0XFF

@@ -115,10 +115,10 @@ void Lcd12864_Init()
 	
 	//--表格第15个命令，0xC8普通(上下)方向选择选择反向，0xC0为正常方向--// 
 	LcdSt7565_WriteCmd(0xC8);  //Common direction 
-	                  
+	                 
 	//--表格第9个命令，0xA6为设置字体为黑色，背景为白色---//
 	//--0xA7为设置字体为白色，背景为黑色---//
-	LcdSt7565_WriteCmd(0xA7);  //reverse display
+	LcdSt7565_WriteCmd(0xA6);  //reverse display
 
 	//--表格第10个命令，0xA4像素正常显示，0xA5像素全开--//
 	LcdSt7565_WriteCmd(0xA4);  //normal display
